@@ -1,22 +1,27 @@
-FROM jupyter/tensorflow-notebook:b4dd11e16ae4
-
-# launchbot-specific labels
-LABEL name.launchbot.io="Introduction to Tensorflow"
-LABEL workdir.launchbot.io="/usr/workdir"
-LABEL description.launchbot.io="Introduction to Tensorflow"
-LABEL 8888.port.launchbot.io="Jupyter Notebook"
-LABEL 8000.port.launchbot.io="Oriole"
+#FROM jupyter/tensorflow-notebook:b4dd11e16ae4
+FROM jupyter/tensorflow-notebook:latest
 
 # Set the working directory
-WORKDIR /usr/workdir
+WORKDIR /home/jovyan
+
+USER root
 
 # Modules
-COPY requirements.txt /usr/workdir/requirements.txt
-RUN pip install -r /usr/workdir/requirements.txt
+COPY requirements.txt /home/jovyan/requirements.txt
+RUN pip install -r /home/jovyan/requirements.txt
+
+USER $NB_USER
+
+# Files to be included
+COPY README.md /home/jovyan/
+COPY images/ /home/jovyan/images
+COPY data/ /home/jovyan/data
+COPY *.ipynb /home/jovyan/
+COPY tmp/data /home/jovyan/
 
 # Expose the notebook port
 EXPOSE 8888
 
 # Start the notebook server
-CMD jupyter notebook --no-browser --port 8888 --ip=* --NotebookApp.token=''
+CMD jupyter notebook --no-browser --port 8888 --ip=*
 

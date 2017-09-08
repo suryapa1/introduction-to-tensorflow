@@ -22,7 +22,7 @@ COPY README.md /home/jovyan/
 COPY images/ /home/jovyan/images
 COPY data/ /home/jovyan/data
 COPY *.ipynb /home/jovyan/
-COPY tmp/ /home/jovyan/
+COPY tmp/data /home/jovyan/tmp/data
 
 # Expose the notebook port
 EXPOSE 8888

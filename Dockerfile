@@ -15,14 +15,14 @@ USER root
 COPY requirements.txt /home/jovyan/requirements.txt
 RUN pip install -r /home/jovyan/requirements.txt
 
-USER $NB_USER
-
 # Files to be included
 COPY README.md /home/jovyan/
 COPY images/ /home/jovyan/images
 COPY data/ /home/jovyan/data
 COPY *.ipynb /home/jovyan/
 COPY tmp/data /home/jovyan/tmp/data
+RUN chown $NB_USER:users  *.ipynb
+USER $NB_USER
 
 # Expose the notebook port
 EXPOSE 8888

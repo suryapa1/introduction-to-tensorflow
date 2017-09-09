@@ -85,3 +85,10 @@ Next, just click on `Introduction to TensorFlow.ipynb` to open this course's Jup
 
 That's it! Now, have fun learning TensorFlow!
 
+## Using Docker
+
+There is a docker image available for this course: esztiorm/0636920073925
+
+If you wish to create your own image using the Dockerfile, please note that the path "tmp/data" should be changed to "/home/jovyan/tmp/data" in notebooks 8 through 11.
+
+`mnist = input_data.read_data_sets("/home/jovyan/tmp/data/")`

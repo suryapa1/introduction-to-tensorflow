@@ -83,7 +83,7 @@ To start Jupyter, simply type:
 
 This should open up your browser, and you should see Jupyter's tree view, with the contents of the current directory. If your browser does not open automatically, visit [localhost:8888](http://localhost:8888/tree).
 
-Next, just click on `Introduction to TensorFlow.ipynb` to open this course's Jupyter notebook.
+Next, just click on any `*.ipynb` to open a Jupyter notebook.
 
 That's it! Now, have fun learning TensorFlow!
 

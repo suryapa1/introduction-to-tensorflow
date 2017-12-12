@@ -3,7 +3,7 @@ Introduction to TensorFlow
 
 This project accompanies my **Introduction to TensorFlow** live online trainings ([April 27-28](https://www.safaribooksonline.com/live-training/courses/introduction-to-tensorflow/0636920079460/), [June 21-22](https://www.safaribooksonline.com/live-training/courses/introduction-to-tensorflow/0636920073918/), [September 13-14](https://www.safaribooksonline.com/live-training/courses/introduction-to-tensorflow/0636920079521),  [December 13-14](https://www.safaribooksonline.com/live-training/courses/introduction-to-tensorflow/0636920079583/) 2017). It contains the exercises and their solutions, in the form of a [Jupyter](http://jupyter.org/) notebook.
 
-During the course itself, a url will be provided for running the notebooks. 
+During the course itself, a url will be provided for running the notebooks. You can participate in the course without installing anyting local.
 
 To clone this repository, you need to have a GitLab account. You can set one up [here](https://gitlab.com/users/sign_in) under *Register*.
 

@@ -15,10 +15,6 @@ USER root
 COPY requirements.txt /home/jovyan/requirements.txt
 RUN pip install -r /home/jovyan/requirements.txt
 
-# Revert tornado to 4.3.5
-RUN pip uninstall tornado
-RUN pip install tornado==4.3.5
-
 # Files to be included
 COPY README.md /home/jovyan/
 COPY images/ /home/jovyan/images

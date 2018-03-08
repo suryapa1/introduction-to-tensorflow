@@ -11,4 +11,4 @@ tensorflow==1.2.0
 #tensorflow-gpu==1.2.0
 
 # We need to revert to this version
-tornado==4.3.5
+tornado==4.5.3

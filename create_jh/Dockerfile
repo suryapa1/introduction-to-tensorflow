@@ -1,8 +1,12 @@
 FROM us.gcr.io/jupyterhub-170614/0636920073925:v1.4
 
 USER root
+
+# We need to uninstall the latest version of tornado and revert to 4.5.3
+RUN pip uninstall tornado
+
 # notebook and ipykernel should already be installed. now just need jupyterhub
-RUN pip install --upgrade --no-cache-dir jupyterhub==0.8.1
+RUN pip install --upgrade --no-cache-dir jupyterhub==0.8.1 tornado==4.5.3
 
 USER jovyan
 
